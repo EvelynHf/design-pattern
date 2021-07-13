@@ -1,0 +1,10 @@
+/.idea/
+/.vscode/
+.project
+.settings
+.classpath
+.factorypath
+*.iml
+*.log
+*.sh
+*.DS_Store
