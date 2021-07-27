@@ -8,3 +8,4 @@
 *.log
 *.sh
 *.DS_Store
+/basic/target
