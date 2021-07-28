@@ -1,7 +1,7 @@
 package org.eve.singleton;
 
 /**
- * 单例-懒汉模式，线程不安全
+ * 单例模式-懒汉模式，线程不安全
  *
  * @author Murphy
  * @Date 2021/07/13 15:28:00

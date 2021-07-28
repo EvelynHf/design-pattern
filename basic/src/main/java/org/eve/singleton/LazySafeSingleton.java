@@ -1,7 +1,7 @@
 package org.eve.singleton;
 
 /**
- * 单例-懒汉模式，线程安全
+ * 单例模式-懒汉模式，线程安全
  * instance = new LazySafeSingleton()，是两步操作：对象初始化、变量赋值
  * 在JVM中可能由于指令优化，将这两步操作顺序颠倒，比如先分配内存空间并赋值给变量，然后再去初始化这个对象
  * 因此，使用 synchronized 对代码库加锁并不能绝对保证线程安全

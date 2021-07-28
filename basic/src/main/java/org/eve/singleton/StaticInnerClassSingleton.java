@@ -1,7 +1,7 @@
 package org.eve.singleton;
 
 /**
- * 单例-静态内部类
+ * 单例模式-静态内部类
  * JVM内部的类加载机制能够保证一个类的加载过程是线程互斥的
  *
  * @author Murphy
