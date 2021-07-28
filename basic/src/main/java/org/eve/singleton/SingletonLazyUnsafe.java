@@ -7,6 +7,7 @@ package org.eve.singleton;
  * @Date 2021/07/13 15:28:00
  */
 public class SingletonLazyUnsafe {
+
     private static SingletonLazyUnsafe instance;
 
     private SingletonLazyUnsafe() {
