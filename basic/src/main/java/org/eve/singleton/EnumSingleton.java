@@ -12,11 +12,11 @@ package org.eve.singleton;
  * @author Murphy
  * @Date 2021/07/27 19:16:00
  */
-public enum SingletonEnum {
+public enum EnumSingleton {
 
     INSTANCE;
 
-    public static SingletonEnum getInstance() {
+    public static EnumSingleton getInstance() {
         return INSTANCE;
     }
 

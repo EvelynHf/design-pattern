@@ -7,16 +7,16 @@ package org.eve.singleton;
  * @author Murphy
  * @Date 2021/07/27 16:36:00
  */
-public class SingletonStaticInnerClass {
+public class StaticInnerClassSingleton {
 
-    private SingletonStaticInnerClass() {
+    private StaticInnerClassSingleton() {
     }
 
     private static class InstanceFactory {
-        private static SingletonStaticInnerClass instance = new SingletonStaticInnerClass();
+        private static StaticInnerClassSingleton instance = new StaticInnerClassSingleton();
     }
 
-    public static SingletonStaticInnerClass getInstance() {
+    public static StaticInnerClassSingleton getInstance() {
         return InstanceFactory.instance;
     }
 

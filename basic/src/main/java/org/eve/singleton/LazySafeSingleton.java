@@ -2,7 +2,7 @@ package org.eve.singleton;
 
 /**
  * 单例-懒汉模式，线程安全
- * instance = new SingletonLazySafe()，是两步操作：对象初始化、变量赋值
+ * instance = new LazySafeSingleton()，是两步操作：对象初始化、变量赋值
  * 在JVM中可能由于指令优化，将这两步操作顺序颠倒，比如先分配内存空间并赋值给变量，然后再去初始化这个对象
  * 因此，使用 synchronized 对代码库加锁并不能绝对保证线程安全
  * 有可能A线程进入synchronized块，执行完分配内存空间并赋值给变量，但是对象还未初始化的时候，A线程退出了，
@@ -13,25 +13,25 @@ package org.eve.singleton;
  * @author Murphy
  * @Date 2021/07/27 16:24:00
  */
-public class SingletonLazySafe {
+public class LazySafeSingleton {
 
-    private volatile static SingletonLazySafe instance;
+    private volatile static LazySafeSingleton instance;
 
-    private SingletonLazySafe() {
+    private LazySafeSingleton() {
     }
 
-    //    public static synchronized SingletonLazySafe getInstance() {
+    //    public static synchronized LazySafeSingleton getInstance() {
     //        if (null == instance) {
-    //            instance = new SingletonLazySafe();
+    //            instance = new LazySafeSingleton();
     //        }
     //        return instance;
     //    }
 
-    public static SingletonLazySafe getInstance() {
+    public static LazySafeSingleton getInstance() {
         if (null == instance) {
-            synchronized (SingletonLazySafe.class) {
+            synchronized (LazySafeSingleton.class) {
                 if (null == instance) {
-                    instance = new SingletonLazySafe();
+                    instance = new LazySafeSingleton();
                 }
             }
         }
