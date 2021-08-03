@@ -1,5 +1,7 @@
 package org.eve.proxy.cglibproxy;
 
+import net.sf.cglib.proxy.Enhancer;
+
 /**
  * @author Murphy
  * @Date 2021/08/03 18:47:00
@@ -7,8 +9,8 @@ package org.eve.proxy.cglibproxy;
 public class CglibProxyTest {
 
     public static void main(String[] args) {
-        LogProxy logProxy = new LogProxy();
-        SayHello sayHello = (SayHello) logProxy.getProxy(SayHello.class);
-        sayHello.sayHello();
+        RealSubject realSubject = new RealSubject();
+        RealSubject proxy = (RealSubject) Enhancer.create(realSubject.getClass(), new LogInterceptor());
+        proxy.sayHello();
     }
 }

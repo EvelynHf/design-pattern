@@ -10,7 +10,7 @@ import net.sf.cglib.proxy.MethodProxy;
  * @author Murphy
  * @Date 2021/08/03 18:44:00
  */
-public class LogProxy implements MethodInterceptor {
+public class LogInterceptor implements MethodInterceptor {
 
     private Enhancer enhancer = new Enhancer();
 
